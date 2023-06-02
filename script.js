@@ -58,3 +58,12 @@ window.addEventListener("DOMContentLoaded", function () {
     revealText();
   });
   
+
+  function autoRefresh(refreshInterval) {
+    setTimeout(function() {
+      location.reload();
+    }, refreshInterval);
+  }
+  
+  // Usage: autoRefresh(10000); // Refresh every 10 seconds
+
