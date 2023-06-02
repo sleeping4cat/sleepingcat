@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Math Problem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    input[type="text"] {
+      width: 200px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    
+    input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Solve the Math Problem</h1>
+    <form onsubmit="checkAnswer(event)">
+      <label for="answer">Enter the first prime number greater than 10:</label>
+      <input type="text" id="answer" required>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <script>
+    function checkAnswer(event) {
+      event.preventDefault();
+
+      const answerInput = document.getElementById("answer");
+      const answer = parseInt(answerInput.value);
+
+      if (isPrime(answer) && answer > 10) {
+        window.location.href = "index.html"; // Redirect to the real website
+      } else {
+        window.location.href = "mac.html"; // Redirect to the Mac user error page
+      }
+    }
+
+    function isPrime(number) {
+      if (number < 2) {
+        return false;
+      }
+  
+      for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+          return false;
+        }
+      }
+  
+      return true;
+    }
+  </script>
+</body>
+</html>

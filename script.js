@@ -79,5 +79,17 @@ window.addEventListener("DOMContentLoaded", function () {
   
   // Call the function to block mobile access
   blockMobileAccess();
+
+  function redirectToMathPage() {
+    const isMacOriPhone = /Mac|iPhone/i.test(navigator.platform);
+    
+    if (isMacOriPhone) {
+      window.location.href = "math.html"; // Replace "math.html" with the URL of the math problem page
+    }
+  }
+  
+  // Call the function to check the device and redirect if necessary
+  redirectToMathPage();
+  
   
   
