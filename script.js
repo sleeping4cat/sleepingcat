@@ -67,3 +67,15 @@ window.addEventListener("DOMContentLoaded", function () {
   
   // Usage: autoRefresh(10000); // Refresh every 10 seconds
 
+  function checkMobileDevice() {
+    const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobileDevice) {
+      const warningMessage = "YOU CAN'T ACCESS THIS WEBSITE ON A MOBILE PHONE. BECAUSE IT WILL LEAD TO A POOR EXPERIENCE!";
+      alert(warningMessage);
+    }
+  }
+  
+  // Call the function to check if the website is being accessed on a mobile device
+  checkMobileDevice();
+  
