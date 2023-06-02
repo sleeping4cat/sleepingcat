@@ -1,0 +1,122 @@
+body {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #fff;
+    /* add header font colour to white */
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+
+  .reveal {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    animation: revealText 5s linear forwards;
+  }
+  
+  @keyframes revealText {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    justify-content: flex-start; /* Changed from 'center' to 'flex-start' */
+    height: 100vh;
+  }
+
+  .container p {
+    width: 100%;
+    max-width: 1000px; /* Added for better readability on larger screens */
+  }
+  
+  .profile-photo {
+    width: 125px;
+    height: 125px;
+    border-radius: 0;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-top: 20px; /* Added margin-top to create space between photo and text */
+  }
+  
+  .footer {
+    background-color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+
+  .dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  
+  /* Dark Mode Styles */
+  
+  .dark-mode {
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+  
+  .dark-mode .header,
+  .dark-mode .footer {
+    background-color: #111;
+  }
+  
+  .slider {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .slider input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider.round:before {
+    transform: translateX(20px);
+  }
