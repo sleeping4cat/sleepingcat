@@ -67,15 +67,17 @@ window.addEventListener("DOMContentLoaded", function () {
   
   // Usage: autoRefresh(10000); // Refresh every 10 seconds
 
-  function checkMobileDevice() {
+  function blockMobileAccess() {
     const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    
+  
     if (isMobileDevice) {
       const warningMessage = "YOU CAN'T ACCESS THIS WEBSITE ON A MOBILE PHONE. BECAUSE IT WILL LEAD TO A POOR EXPERIENCE!";
       alert(warningMessage);
+      window.location.href = "mobile.html"; // Replace "mobile.html" with the URL of your mobile-specific page
     }
   }
   
-  // Call the function to check if the website is being accessed on a mobile device
-  checkMobileDevice();
+  // Call the function to block mobile access
+  blockMobileAccess();
+  
   
