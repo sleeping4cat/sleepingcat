@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .container a {
+      display: block;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #000;
+      font-size: 18px;
+    }
+
+    .container a:hover {
+      color: #999;
+    }
+
+    .dark-mode {
+      background-color: #1c1c1c;
+      color: #fff;
+    }
+
+    .dark-mode .container {
+      background-color: #111;
+    }
+
+    .dark-mode a {
+      color: #fff;
+    }
+
+    .dark-mode .toggle {
+      background-color: #fff;
+    }
+
+    .toggle {
+      display: inline-block;
+      position: relative;
+      width: 40px;
+      height: 20px;
+      background-color: #999;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .toggle .controller {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .toggle.dark-mode {
+      background-color: #999;
+    }
+
+    .toggle.dark-mode .controller {
+      transform: translateX(20px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Choose a Resume Version to Download:</h1>
+    <a href="RESUME-ETHICAL.pdf" download>Artificial Intelligence + Ethical Hacking</a>
+    <a href="RESUME.pdf" download>Artificial Intelligence</a>
+    <div class="toggle" onclick="toggleDarkMode()">
+      <div class="controller"></div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      const body = document.querySelector('body');
+      body.classList.toggle('dark-mode');
+    }
+  </script>
+ <script src="resume.js" defer></script>
+
+</body>
+</html>
