@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;700&family=Playfair+Display:wght@400;500;600;700;900&family=Poppins:wght@300;400;500;700;800;900&family=Raleway:wght@400;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin: 10px;
+    padding: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    text-align: left; 
+}
+
+.project {
+    margin: 10px;
+    padding: 10px;
+    display: none;
+    text-align: left; 
+}
+
+.project.active {
+    display: block;
+}
+
+.project h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.project p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.links a {
+    color: #000;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.footer {
+    text-align: center;
+    background-color: transparent;
+    position: relative;
+    color: black;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.links a:hover {
+    color: #555; 
+    text-decoration: underline; 
+    border: 1px solid #555;
+    padding: 2px 4px;
+}
+
+.project {
+    border: 2px solid blue; 
+    padding: 10px; 
+}
+.main-heading {
+    font-size: x-large;
+    padding-left: 30px;
+    text-align: left; 
+}
+
+.main-heading::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 10px;
+    width: 0;
+    background-color: crimson;
+    transition: all ease 1s;
+
+}
+.main-heading:hover::after{
+    width: 100%;
+}
