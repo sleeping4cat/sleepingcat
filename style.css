@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
 
 body {
-  background-color: #000000; /* Black background */
+  background-color: #45474B; /* Black background */
   color: #00ff00; /* Green text */
   font-family: 'Albert Sans'; /* Albert Sans font */
   margin: 0;
@@ -9,7 +9,7 @@ body {
 
 header {
   background-color: #000000; /* Black background for header */
-  color: #00ff00; /* Green text for header */
+  color: #F5F7F8; /* Green text for header */
   padding: 20px;
   position: fixed; /* Position fixed to stay fixed at the top */
   top: 0; /* Stick to the top */
@@ -33,7 +33,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #00ff00; /* Green text for navigation links */
+  color: #F4CE14; /* Green text for navigation links */
 }
 
 main {
