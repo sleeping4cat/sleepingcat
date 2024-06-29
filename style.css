@@ -105,6 +105,11 @@ p {
   width: 20px;
 }
 
+a {
+  color: #379777;
+  text-decoration: none;
+}
+
 /* Change link color on hover */
 a:hover {
   color: #0077be; /* Ocean blue */
