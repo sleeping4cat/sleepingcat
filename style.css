@@ -2,13 +2,13 @@
 
 body {
   background-color: #45474B; /* Black background */
-  color: #00ff00; /* Green text */
+  color: #F5F7F8; /* Green text */
   font-family: 'Albert Sans'; /* Albert Sans font */
   margin: 0;
 }
 
 header {
-  background-color: #000000; /* Black background for header */
+  background-color: #45474B; /* Black background for header */
   color: #F5F7F8; /* Green text for header */
   padding: 20px;
   position: fixed; /* Position fixed to stay fixed at the top */
